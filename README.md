@@ -1,4 +1,4 @@
-# Illness among jamaicans
+# Illness among Jamaicans
 
 
 This academic study explored the Jamaican reality of the relationship among sex, age, visits to the doctor, union status, hospital type and smoking on length of illnesses. These variables consistently presented themselves as priority variables associated with longevity of an illness. The study was therefore necessary as it provided additional insight into Jamaica’s unique case. 

@@ -32,20 +32,20 @@ EXECUTE.
 
 Recodes and frequencies
 
-DATASET ACTIVATE DataSet1.
-RECODE union_st (1 thru 2=1) (3 thru 4=0) (ELSE=SYSMIS) INTO Family_supportunit.
-EXECUTE.
+4. DATASET ACTIVATE DataSet1.
+   RECODE union_st (1 thru 2=1) (3 thru 4=0) (ELSE=SYSMIS) INTO Family_supportunit.
+   EXECUTE.
 
-RECODE a4 (1 thru 3=1) (4 thru 7=2) (8 thru 14=3) (15 thru 180=4) (ELSE=SYSMIS) INTO a4_recoded.
-EXECUTE.
+5. RECODE a4 (1 thru 3=1) (4 thru 7=2) (8 thru 14=3) (15 thru 180=4) (ELSE=SYSMIS) INTO a4_recoded.
+   EXECUTE.
 
-FREQUENCIES VARIABLES=a25 ageyrs sex a7 a8a a8c Family_supportunit a4_recoded
+6. FREQUENCIES VARIABLES=a25 ageyrs sex a7 a8a a8c Family_supportunit a4_recoded
   /STATISTICS=STDDEV VARIANCE RANGE MINIMUM MAXIMUM MEAN MEDIAN MODE SKEWNESS SESKEW
   /ORDER=ANALYSIS.
 
 Testing assumptions
 
-REGRESSION
+7. REGRESSION
   /MISSING LISTWISE
   /STATISTICS COEFF OUTS BCOV R ANOVA COLLIN TOL
   /CRITERIA=PIN(.05) POUT(.10)
@@ -56,7 +56,7 @@ REGRESSION
 
 Multinomial test
 
-NOMREG a4_recoded (BASE=LAST ORDER=ASCENDING) BY a25 sex a8a a8c Family_supportunit WITH ageyrs a7
+8. NOMREG a4_recoded (BASE=LAST ORDER=ASCENDING) BY a25 sex a8a a8c Family_supportunit WITH ageyrs a7
   /CRITERIA CIN(95) DELTA(0) MXITER(100) MXSTEP(5) CHKSEP(20) LCONVERGE(0) PCONVERGE(0.000001) 
     SINGULAR(0.00000001)
   /MODEL

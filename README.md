@@ -5,7 +5,7 @@ This academic study explored the Jamaican reality of the relationship among sex,
 
 The data used was the 2009 Jamaica Survey of Living Conditions and could not be made available on an open platform due to copy right infringement. The data set was the most complex I have worked on to date. Without intimate knowledge, mergeing the relevant data sets is virtually impossible. Consultation was therefore necessary with the Statistics Unit who prepared the data set(s) at the time. For more information on said data set, see https://www.pioj.gov.jm/product/jamaica-survey-of-living-conditions-jslc-2019/ and https://www.uwi.edu/salises-mona/databank/JSLC. I have included a sample of the 2012 version of the questionnaire that is openly available.
 
-The code used for the study can be seen below:
+All analyses were done using SPSS. The code used for the study can be seen below:
 
 Merging the data
 
